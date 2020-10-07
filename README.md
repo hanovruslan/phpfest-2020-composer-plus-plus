@@ -1,6 +1,6 @@
-# jekyller-symfoniacs-spb.ru #
+# PHPFest 2020 // Composer++ #
 
-[View](https://hanovruslan.github.io/jekyller-symfoniacs-spb.ru)
+[View](https://hanovruslan.github.io/phpfest-2020-composer-plus-plus)
 
 ## Development ##
 
