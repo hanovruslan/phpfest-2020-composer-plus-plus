@@ -6,78 +6,94 @@ style: |
     /* собственные стили можно писать здесь!! */
 ---
 
-# ![](pictures/symfoniacs-spb-logo-version-0.svg){:.logo}
+# ![](pictures/symcode-logo.svg){:.logo}
 
 ## {{ site.presentation.title }}
 {:.title}
 
-## История symfony
+## Composer ##
+{:.fullscreen}
+```
+Composer is not a package manager in the same sense as Yum or Apt are. Yes, it deals with "packages" or libraries, but it manages them on a per-project basis, installing them in a directory (e.g. vendor) inside your project.
 
-**Symfony 1**
+By default, it does not install anything globally. Thus, it is a dependency manager. It does however support a "global" project for convenience via the global command.
+```
 
-* Релиз ~2008 год
-* PHP 5.0
-* PEAR
-* CVS/SVN
-* Apache 1
-* Notepad++
-* Нет Composer, PDO, PSR*
+## Копмозитор (исправлено) ##
+{:.fullscreen}
+```
+Composer is not a package manager in the same sense as Yum or Apt are. Yes, it deals with "packages" or libraries, but it manages them on a per-project basis, installing them in a directory (e.g. vendor) inside your project.
 
-## История symfony
+By default, it does not install anything globally. Thus, it is a dependency manager. It does however support a "global" project for convenience via the global command.
+```
 
-**Symfony 4**
+## Введение в Composer ##
 
-* Релиз - ноябрь 2017
-* PHP 7.1
-* Composer
-* nginx
-* Docker
-* Phpstorm
-* Debian 10 - symfony/* 3.4
-* Нет PEAR!
+**Composer - это ...**
 
-## Будущее symfony
+**Composer - это ...
+- {:.next}Незаменимым инструмент для PHP
+- {:.next}Менеджер зависимостей для PHP
+- {:.next}Менеджер пакетов для PHP
+- {:.next}Система автоматической сборки для PHP
 
-**Symfony 5**
+**Composer это (fixed) ... **
 
-* Релиз ~ноябрь 2019
-* PHP ~7.4/8.0 - то есть почти как Java
-* Best Framework - no framework
+**Composer это ...
+- {:.next}PEAR здорового человека
+- {:.next}Управление зависимостями для PHP
+- {:.next}Управление пакетами для PHP
+- {:.next}Система автоматической сборки для PHP
 
-## История сообщества
+## Зависимости vs пакеты ##
 
-* Москва 
-* 2014 - 4 митапа
-* 2015 - 4 митапа
-* 2016 - 4 митапа
-* 2017 - 7 митапов
-* Посещаемость от 10 (первые митапы) до 650 (15-ый, в Ламоде)
+**История**
 
-## История Санкт-Петербург
+* История
 
-* Санкт-Петербург 
-* 2017 - 2 митапа
-* 2018 - 2 митапа
-* 2019 - 2 митапа ( вместе с этим 8) )
-* Посещаемость от 20 (3-ый) до 70 (4-ый)
+## Настоящее ##
 
-## Темы
+**Настоящее**
 
-* Composer Packagist Symfony Symfony2 Symfony3 Symfony4 Flex
-* Bundles Doctrine Workflow Security Form Service Container
-* PDO Mysql PostgreSQL
-* TDD BDD DDD AOP SOLID API CRUD
-* Varnish Memcache Docker RabbitMQ PhpStorm Github Gitlab Bitbucket
-* Devops Test Vim
+* История
 
-## Будущее Санкт-Петербург
+## Схема работы ##
 
-* 4+ митапа в год
-* 2+ дополнительных сообщества
-* Мастерклассы, хакатоны и т.п.
-* Инфоприсутствие и ребрендинг
+**Компоненты**
 
-## Контакты
+* Автолоадер
+* Логгер
+* Окружение запуска команд
+
+## Плагины ##
+
+**Популярные плагины**
+
+* hirak/prestissimo
+* brainmaestro/composer-git-hooks
+* mouf/nodejs-installer
+* neronmoon/scriptsdev
+
+## Worst advices ever ##
+
+* Всегда запускайте `composer update` для пересборки проекта
+* Всегда используйте `composer require package/name:dev-master`
+
+## Проблемы ##
+
+**Проблемы**
+
+* Настрайка окружение для запуска команд в композере;
+* Настройка вывода результатов выполнения команды;
+* нет возможности запускать фоновые процессы;
+* нет мультимодульности, то есть в одном пакете нельзя описать несколько так чтобы они были доступны как отдельные пакеты локально или через репозиторий;
+* нельзя повторно запускать команду не с самого начала а перед этапом когда что-то отвалилось.
+
+## Полезные ссылки ##
+
+* https://github.com/jakoch/awesome-composer
+
+## Контакты ##
 {:.contacts}
 
 <!-- разделитель контактов -->
@@ -85,7 +101,7 @@ style: |
 
 <!-- center -->
 
-- {:.telegram} symfoniacs_spb - чат
-- {:.telegram} symfoniacs_spb_live - канал
+- {:.telegram} symcode - чат
+- {:.telegram} symcode_live - канал
 
 <!-- right -->
