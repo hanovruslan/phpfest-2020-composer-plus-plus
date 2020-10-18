@@ -11,61 +11,64 @@ style: |
 ## {{ site.presentation.title }}
 {:.title}
 
-## Composer ##
-{:.fullscreen}
-```
-Composer is not a package manager in the same sense as Yum or Apt are. Yes, it deals with "packages" or libraries, but it manages them on a per-project basis, installing them in a directory (e.g. vendor) inside your project.
+## Введение в Composer
+{:.section}
 
-By default, it does not install anything globally. Thus, it is a dependency manager. It does however support a "global" project for convenience via the global command.
-```
+## Чего не будет в докладе ##
 
-## Копмозитор (исправлено) ##
-{:.fullscreen}
-```
-Composer is not a package manager in the same sense as Yum or Apt are. Yes, it deals with "packages" or libraries, but it manages them on a per-project basis, installing them in a directory (e.g. vendor) inside your project.
+**Лучшие практики Composer (почти не будет ...)**
 
-By default, it does not install anything globally. Thus, it is a dependency manager. It does however support a "global" project for convenience via the global command.
-```
+**Сравнения с аналогами (почти не будет ...)**
+
+**Большие цитаты из документации (почти не будет ...)**
+
+## Что будет в докладе ##
+
+**Не только про composer**
+
+**Сравнения с аналогами на концептуальном уровне**
+
+**Передаваться приветы разным штукам**
+
+**Одна максимально полезная тематическая ссылка**
 
 ## Введение в Composer ##
 
 **Composer - это ...**
 
-**Composer - это ...
-- {:.next}Незаменимым инструмент для PHP
-- {:.next}Менеджер зависимостей для PHP
 - {:.next}Менеджер пакетов для PHP
-- {:.next}Система автоматической сборки для PHP
+- {:.next}Менеджер зависимостей для PHP
+- {:.next}Незаменимым инструмент для PHP
+- {:.next}...
 
-**Composer это (fixed) ... **
+**Composer это (исправлено) ...**
 
-**Composer это ...
-- {:.next}PEAR здорового человека
-- {:.next}Управление зависимостями для PHP
 - {:.next}Управление пакетами для PHP
+- {:.next}Управление зависимостями для PHP
+- {:.next}PEAR здорового человека (привет, PSR-0/4)
 - {:.next}Система автоматической сборки для PHP
 
-## Зависимости vs пакеты ##
+## Пакеты или зависимости ##
 
-**История**
+- {:.next}Пакет - это добавка к вашему проекту, с помощью которой он (проект) может сделать больше.
+- {:.next}Зависимость - это часть вашего проекта, без которой он (проект) не сможет сделать то, что должен.
 
-* История
-
-## Настоящее ##
-
-**Настоящее**
-
-* История
-
+## Как работает ##
+{:.section}
 ## Схема работы ##
+
+![](pictures/schema/composer.png)
 
 **Компоненты**
 
-* Автолоадер
-* Логгер
-* Окружение запуска команд
+* {:.next}Автолоадер
+* {:.next}Логгер
+* {:.next}Окружение запуска команд
+* {:.next}Плагины
 
-## Плагины ##
+## Схема работы с плагинами ##
+
+![](pictures/schema/composer-with-plugins.png)
 
 **Популярные плагины**
 
@@ -74,22 +77,21 @@ By default, it does not install anything globally. Thus, it is a dependency mana
 * mouf/nodejs-installer
 * neronmoon/scriptsdev
 
-## Worst advices ever ##
-
-* Всегда запускайте `composer update` для пересборки проекта
-* Всегда используйте `composer require package/name:dev-master`
-
 ## Проблемы ##
 
-**Проблемы**
+1. Настройка окружения для запуска команд в композере
+1. Настройка вывода результатов выполнения команды
+1. Нет возможности запускать фоновые процессы
+1. Нельзя повторно запускать комплексную команду со стадии, когда была ошибка
 
-* Настрайка окружение для запуска команд в композере;
-* Настройка вывода результатов выполнения команды;
-* нет возможности запускать фоновые процессы;
-* нет мультимодульности, то есть в одном пакете нельзя описать несколько так чтобы они были доступны как отдельные пакеты локально или через репозиторий;
-* нельзя повторно запускать команду не с самого начала а перед этапом когда что-то отвалилось.
+## Как решать проблемы ##
 
-## Полезные ссылки ##
+* Настройка окружения для запуска команд в композере
+* Настройка вывода результатов выполнения команды
+* Нет возможности запускать фоновые процессы
+* Нельзя повторно запускать комплексную команду со стадии, когда была ошибка
+
+## Полезная ссылка ##
 
 * https://github.com/jakoch/awesome-composer
 
