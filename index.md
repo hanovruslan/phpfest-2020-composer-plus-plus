@@ -115,8 +115,6 @@ style: |
 <figure markdown="1">
 
 ### {{ site.author.name }}
-
-{{ site.author.position }}
 {{ site.author.company.name }}
 
 </figure>
@@ -127,8 +125,6 @@ style: |
 - {:.telegram}hanovruslan
 - {:.mail}hanov.ruslan@gmail.com
 - {:.github}hanovruslan
-- {:.twitter}hanovruslan
-- {:.facebook}hanov.ruslan
 
 <!-- right -->
 
