@@ -115,19 +115,41 @@ style: |
 ## Контакты
 {:.contacts}
 
+{% if site.author %}
+
+<figure markdown="1">
+
+### {{ site.author.name }}
+
+{% if site.author.position %}
+{{ site.author.position }}
+{% endif %}
+
+{% if site.author.position %}
+{{ site.author.company.name }}
+{% endif %}
+
+</figure>
+
+{% endif %}
+
+</figure>
+
+{% endif %}
+
 <!-- разделитель контактов -->
 -------
 
 <!-- left -->
+- {:.telegram}hanovruslan
 - {:.mail}hanov.ruslan@gmail.com
-- {:.gihub}@hanovruslan
-- {:.twitter}@hanovruslan
+- {:.github}hanovruslan
+- {:.twitter}hanovruslan
 - {:.facebook}hanov.ruslan
 
 <!-- right -->
 
-** Symcode
-- {:.telegram} symcode
-- {:.telegram} symcode_live
+- {:.telegram}symcode
+- {:.telegram}symcode_live
 
 <!-- right -->
