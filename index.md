@@ -8,6 +8,7 @@ style: |
 
 ## {{ site.presentation.title }}
 {:.title}
+{:.site.presentation.title}
 
 ## Введение в Composer
 {:.section}
@@ -33,11 +34,14 @@ style: |
 ## Введение в Composer
 
 **Composer - это ...**
+
 - {:.next}Менеджер пакетов для PHP
 - {:.next}Менеджер зависимостей для PHP
 - {:.next}Незаменимым инструмент для PHP
 - {:.next}...
+
 **Composer это (исправлено) ...**
+
 - {:.next}Управление пакетами для PHP
 - {:.next}Управление зависимостями для PHP
 - {:.next}PEAR здорового человека (привет, PSR-0/4)
