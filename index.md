@@ -118,13 +118,7 @@ style: |
 
 ### {{ site.author.name }}
 
-{% if site.author.position %}
 {{ site.author.position }}
-{% endif %}
-
-{% if site.author.position %}
-{{ site.author.company.name }}
-{% endif %}
 
 </figure>
 
