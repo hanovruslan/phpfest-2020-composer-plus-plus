@@ -3,10 +3,19 @@
 layout: yandex2
 
 style: |
-    /* собственные стили можно писать здесь!! */
+    .pre-small pre code { font-size: 24px!important; line-height: 48px!important; }
+    .pre-big pre code { font-size: 54px !important; line-height: 108px !important; } #  9 lines x 52 symbols
+    .big-list { font-size: 80px!important; line-height: 160px!important; }
+    .images-w { background-color: #fff !important; }
+    .slide-red { border-left: 9px solid #f00 !important; }
+    figure.short { width: 480px !important; }
+    .text-center { text-align: center !important; }
+    img.center { margin: auto !important; }
+
 ---
 
 ## {{ site.presentation.title }}
+{:.title}
 
 ## Введение в Composer
 {:.section}
@@ -52,9 +61,12 @@ style: |
 
 ## Как работает
 {:.section}
+
 ## Схема работы
 
 ![](pictures/schema/composer.png)
+
+## Схема работы: Компоненты
 
 **Компоненты**
 
