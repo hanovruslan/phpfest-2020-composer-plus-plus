@@ -5,7 +5,7 @@ style: |
     .pre-big pre code { font-size: 54px !important; line-height: 108px !important; } #  9 lines x 52 symbols
     .big-list { font-size: 80px!important; line-height: 160px!important; }
     .images-w { background-color: #fff !important; }
-    .images-wide { width: 100% !important; }
+    .images-wide { width: 100%; }
     .slide-red { border-left: 9px solid #f00 !important; }
     figure.short { width: 480px !important; }
     .text-center { text-align: center !important; }
@@ -67,7 +67,7 @@ style: |
 
 ## Схема работы
 
-![](pictures/schema/composer.png)
+![](pictures/schema/composer.png){:.images-wide}
 
 ## Схема работы: Компоненты
 
@@ -80,7 +80,7 @@ style: |
 
 ## Схема работы с плагинами
 
-![](pictures/schema/composer-with-plugins.png)
+![](pictures/schema/composer-with-plugins.png){:.images-wide}
 
 ## Популярные плагины
 
