@@ -67,7 +67,7 @@ style: |
 
 ## Схема работы
 
-![](pictures/schema/composer.png){:.images-wide}
+![](pictures/schema/composer.png)
 
 ## Схема работы: Компоненты
 
