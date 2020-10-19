@@ -14,6 +14,8 @@ style: |
 
 ---
 
+# ![](pictures/phpfest.jpg){:.logo}
+
 ## {{ site.presentation.title }}
 {:.title}
 
