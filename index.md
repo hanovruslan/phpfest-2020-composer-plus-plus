@@ -112,22 +112,14 @@ style: |
 ## Контакты
 {:.contacts}
 
-{% if site.author %}
-
 <figure markdown="1">
 
 ### {{ site.author.name }}
 
 {{ site.author.position }}
+{{ site.author.company.name }}
 
 </figure>
-
-{% endif %}
-
-</figure>
-
-{% endif %}
-
 <!-- разделитель контактов -->
 -------
 
