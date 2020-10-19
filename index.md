@@ -11,10 +11,9 @@ style: |
     figure.short { width: 480px !important; }
     .text-center { text-align: center !important; }
     img.center { margin: auto !important; }
-
 ---
 
-# ![](pictures/phpfest.kpg){:.logo}
+# ![](pictures/phpfest.jpg){:.logo}
 
 ## {{ site.presentation.title }}
 {:.title}
@@ -52,14 +51,12 @@ style: |
 
 - {:.next}Менеджер пакетов для PHP
 - {:.next}Менеджер зависимостей для PHP
-- {:.next}Незаменимым инструмент для PHP
 - {:.next}...
 
 **Composer это (исправлено) ...**
 
 - {:.next}Управление пакетами для PHP
 - {:.next}Управление зависимостями для PHP
-- {:.next}PEAR здорового человека (привет, PSR-0/4)
 - {:.next}Система автоматической сборки для PHP
 
 ## Пакеты или зависимости
