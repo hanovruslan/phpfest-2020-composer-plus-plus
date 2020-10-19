@@ -7,8 +7,6 @@ style: |
 ---
 
 ## {{ site.presentation.title }}
-{:.title}
-{:.site.presentation.title}
 
 ## Введение в Composer
 {:.section}
