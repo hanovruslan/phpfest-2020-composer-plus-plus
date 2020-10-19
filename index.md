@@ -1,7 +1,5 @@
 ---
-
 layout: yandex2
-
 style: |
     .pre-small pre code { font-size: 24px!important; line-height: 48px!important; }
     .pre-big pre code { font-size: 54px !important; line-height: 108px !important; } #  9 lines x 52 symbols
@@ -13,9 +11,7 @@ style: |
     .text-center { text-align: center !important; }
     img.center { margin: auto !important; }
 ---
-
 # ![](pictures/phpfest.jpg){:.logo}
-{:.title}
 
 ## {{ site.presentation.title }}
 {:.title}
