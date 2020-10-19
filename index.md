@@ -132,7 +132,7 @@ style: |
 <!-- left -->
 - {:.telegram}hanovruslan
 - {:.mail}hanov.ruslan@gmail.com
-- {:.github}hanovruslan
+- {:.github}hanovruslan41
 
 <!-- right -->
 
