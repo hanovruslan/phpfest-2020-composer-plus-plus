@@ -154,7 +154,7 @@ style: |
 
 
 "scripts": {
-    "open-report": "firefox report.html"
+  "report": "firefox report.html"
 }
 ```
 
@@ -165,7 +165,7 @@ style: |
 
 
 "scripts": {
-    "open-report": "(nohup ... 1>>/dev/null 2>&1 &); true"
+  "report": "(nohup ... 1>>/dev/null 2>&1 &); true"
 }
 ```
 
@@ -174,19 +174,12 @@ style: |
 
 ## Раздутый набор скриптов: решение
 ```php
-use Composer\Plugin\Capability\CommandProvider;
-
 class ScriptsCommandProvider implements CommandProvider
 {
-    /**
-     * {@inheritdoc}
-     */
     public function getCommands()
     {
         $commands = [];
-        /**
-         * fullfill $commands
-         */
+        /** fullfill $commands */
         return $commands;
     }
 }
