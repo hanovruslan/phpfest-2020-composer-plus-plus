@@ -6,7 +6,7 @@ style: |
     .big-list { font-size: 80px!important; line-height: 160px!important; }
     .images-w { background-color: #fff !important; }
     .images-wide { width: 100%; }
-    .slide-red { border-left: 9px solid #f00 !important; }
+    .red { border-left: 9px solid #f00 !important; }
     figure.short { width: 480px !important; }
     .text-center { text-align: center !important; }
     img.center { margin: auto !important; }
@@ -19,11 +19,11 @@ style: |
 
 ## План
 
-**Что будет в докладе**{:.slide.next}
+**Что будет в докладе**{:.next}
 
-**Чего не будет в докладе**{:.slide.next}
+**Чего не будет в докладе**{:.red.next}
 
-**План**{:.slide.next}
+**План**{:.slide}
 
 ## План
 
@@ -38,19 +38,19 @@ style: |
 
 ## Альтернативы
 
-**PHing**{:.slide.next}
+**PHing**{:.next}
 
-**Makefile**{:.slide.next}
+**Makefile**{:.next}
 
-**Gradle**{:.slide.next}
+**Gradle**{:.next}
 
 ## Альтернативы, есть но ...
 
-**Нативность**{:.slide.next}
+**Нативность**{:.next}
 
-**Качество**{:.slide.next}
+**Качество**{:.next}
 
-**Популярность**{:.slide.next}
+**Популярность**{:.next}
 
 ## Введение
 
