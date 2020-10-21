@@ -203,10 +203,10 @@ class ScriptsCommandProvider implements CommandProvider
 
 use Symfony\Component\Console\Command\Command as BaseCommand;
 
-interface MyCustomVerbosityCommand extends BaseCommand {
+class MyCustomVerbosityCommand extends BaseCommand {
     public function run(/** */) {
         // $output->write(/** */);
-        $$this->writeWithVerbosity(/** */)
+        $this->writeWithVerbosity(/** */)
     }
 
     protected function writeWithVerbosity(/** */) {
@@ -216,6 +216,12 @@ interface MyCustomVerbosityCommand extends BaseCommand {
 ```
 
 ## Решение: Переменные окружения
+
+**Плагин на событие `init`**
+
+**использование `extra` для реестра переменных**
+
+**Работа с `getent` и `putenv`**
 
 ## Решение: фоновый процесс
 
