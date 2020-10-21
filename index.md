@@ -101,22 +101,31 @@ style: |
 * brainmaestro/composer-git-hooks
 * mouf/nodejs-installer
 * neronmoon/scriptsdev
+* symfony/flex
 
 ## Экзотические плагины
+
+* clue/graph-composer
+* wikimedia/composer-merge-plugin
+* slince/composer-registry-manager
+* Composer Patches
+
+### Изучал сам, но предпочел не использовать
 
 ## Примеры использование плагинов
 
 **composer require brainmaestro/composer-git-hooks**
 
 ```json
-    "extra": {      
-        "hooks": {
-            "pre-commit": "#my mighty bash one-liner"
-        },     
-    }       
+"extra": {
+    "hooks": {
+        "pre-commit": "#my mighty bash one-liner"
+    }
+}
 ```
 
 **cat .git/hooks/pre-commit**
+{:.fullscreen}
 ```bash
 #!/bin/sh
 
@@ -141,17 +150,23 @@ style: |
 ## Проблемы: пример с фоновым процессом
 {:.fullscreen.pre-big}
 ```json
-    "scripts": {
-        "test:unit:open-reports": "firefox report.html"
-    }
+
+
+
+"scripts": {
+    "open-report": "firefox report.html"
+}
 ```
 
 ## Проблемы: пример с фоновым процессом, костыль
 {:.fullscreen.pre-big}
 ```json
-    "scripts": {
-        "test:unit:open-reports": "(nohup firefox report.html 1>>/dev/null 2>&1 &); true"
-    }
+
+
+
+"scripts": {
+    "open-report": "(nohup firefox report.html 1>>/dev/null 2>&1 &); true"
+}
 ```
 
 ## Решения
