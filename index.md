@@ -165,7 +165,7 @@ style: |
 
 
 "scripts": {
-    "open-report": "(nohup firefox report.html 1>>/dev/null 2>&1 &); true"
+    "open-report": "(nohup ... 1>>/dev/null 2>&1 &); true"
 }
 ```
 
@@ -173,7 +173,6 @@ style: |
 {:.section.section-white}
 
 ## Раздутый набор скриптов: решение
-{:.fullscreen}
 ```php
 use Composer\Plugin\Capability\CommandProvider;
 
