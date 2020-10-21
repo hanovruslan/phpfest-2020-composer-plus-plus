@@ -66,7 +66,6 @@ style: |
 
 - Управление пакетами для PHP
 - Управление зависимостями для PHP
-- Система автоматической сборки для PHP
 
 ## Пакеты или зависимости
 
@@ -90,6 +89,17 @@ style: |
 ![](pictures/schema/composer.png){:.images-wide}
 
 ## Плагины
+
+**Пакет типа `composer-plugin`**
+
+**Шина событий**
+
+**Набор методов**
+
+1. `PluginInterface::activate`
+1. `PluginInterface::deactivate`
+1. `PluginInterface::uninstall`
+1. `EventSubscriberInterface::getSubscribedEvents`
 
 ## Схема работы с плагинами
 
@@ -134,8 +144,6 @@ style: |
 #my mighty bash one-liner
 ```
 
-## Система автоматической сборки для PHP
-
 ## Проблемы
 {:.section.section-white}
 
@@ -151,7 +159,7 @@ style: |
 
 ### Без учета откровенных багов
 
-## Проблем: фоновый процесс
+## Проблема: фоновый процесс, пример
 {:.pre-big}
 ```json
 
@@ -160,7 +168,7 @@ style: |
 }
 ```
 
-## Костыль: фоновый процесс
+## Фоновый процесс : костыль
 {:.pre-big}
 ```json
 
@@ -172,7 +180,7 @@ style: |
 ## Решения
 {:.section.section-white}
 
-## Решение: Раздутый набор скриптов
+## Раздутый набор скриптов : решение
 ```php
 class ScriptsCommandProvider implements CommandProvider
 {
@@ -185,19 +193,19 @@ class ScriptsCommandProvider implements CommandProvider
 }
 ```
 
-## Решение: редактирование composer.json из консоли
+## Редактирование composer.json из консоли : решение
 
 **Своя схема для composer.json**
 
-## Решение: вывод результатов выполнения команды
+## Вывод результатов выполнения команды : решение
 
 **Интеграция с monolog/monolog или аналогами**
 
 или
 
-**Замена \Symfony\...\Command**
+**Замена Symfony\Component\Console\Command\Command**
 
-## Решение: вывод результатов выполнения команды (2)
+## Вывод результатов выполнения команды (2) : решение
 {:.fullscreen}
 ```php
 
@@ -215,21 +223,27 @@ class MyCustomVerbosityCommand extends BaseCommand {
 }
 ```
 
-## Решение: Переменные окружения
+## Переменные окружения : Решение
 
 **Плагин на событие `init`**
 
 **использование `extra` для реестра переменных**
 
-**Работа с `getent` и `putenv`**
+**Работа с `getenv` и `putenv`**
 
-## Решение: фоновый процесс
+## Фоновый процесс : решение
 
 **& или hohup или dosown**
 
 **уход в фоновый процесс на уровне запускаемого скрипта**
 
 **Замена symfony/process на backgroundable/process**
+
+## Повторый запуск команды после последнего успешного шага : решение
+
+**Не знаю (**
+
+**Но знаю где подсмотреть (Gradle)**
 
 ## Composer 2.0
 {:.section.section-white}
