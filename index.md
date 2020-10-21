@@ -102,6 +102,8 @@ style: |
 * mouf/nodejs-installer
 * neronmoon/scriptsdev
 
+## Экзотические плагины
+
 ## Примеры использование плагинов
 
 **composer require brainmaestro/composer-git-hooks**
@@ -137,6 +139,20 @@ style: |
 ### Без учета откровенных багов
 
 ## Проблемы: пример с фоновым процессом
+{:.fullscreen.pre-big}
+```json
+    "scripts": {
+        "test:unit:open-reports": "firefox report.html"
+    }
+```
+
+## Проблемы: пример с фоновым процессом, костыль
+{:.fullscreen.pre-big}
+```json
+    "scripts": {
+        "test:unit:open-reports": "(nohup firefox report.html 1>>/dev/null 2>&1 &); true"
+    }
+```
 
 ## Решения
 {:.section.section-white}
@@ -155,11 +171,11 @@ class ScriptsCommandProvider implements CommandProvider
     {
         $commands = [];
         /**
-         * fullfill commands
+         * fullfill $commands
          */
-
         return $commands;
     }
+}
 ```
 
 ## Редактирование composer.json из консоли: решение
@@ -172,7 +188,7 @@ class ScriptsCommandProvider implements CommandProvider
 1. `--dry-run` для всех команд управления пакетами
 1. `check-platform-reqs` встроена в `dump-autoload`
 1. Опция `--no-suggest` удалена?!
-1. Полноценная работа с extra из консоли
+1. Полноценная работа с `extra` из консоли
 1. Работа с репозиториями
 1. Оффлайн-режим
 
@@ -180,7 +196,7 @@ class ScriptsCommandProvider implements CommandProvider
 
 1. Используйте скрипты
 1. Используйте плагины
-1. Форк composer-а? Может быть?!
+1. Форк composer-а? Может быть не надо?!
 
 ## Полезная ссылка
 
