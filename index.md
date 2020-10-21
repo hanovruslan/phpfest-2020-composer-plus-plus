@@ -103,8 +103,7 @@ style: |
 * neronmoon/scriptsdev
 * symfony/flex*
 
-### Использую, за исключением
-### * - Не использую, но по субъективным причинам
+### Использую, за исключением *
 
 ## Экзотические плагины
 
@@ -154,8 +153,6 @@ style: |
 {:.pre-big}
 ```json
 
-
-
 "scripts": {
   "report": "firefox report.html"
 }
@@ -164,8 +161,6 @@ style: |
 ## Проблемы: пример с фоновым процессом, костыль
 {:.pre-big}
 ```json
-
-
 
 "scripts": {
   "report": "(nohup ... 1>>/dev/null 2>&1 &); true"
@@ -193,6 +188,9 @@ class ScriptsCommandProvider implements CommandProvider
 **Своя схема для composer.json**
 
 ## Composer 2.0
+{:.section.section-white}
+
+## Composer 2.0
 
 1. Плагин `hirak/prestissimo` больше не нужен
 1. `--dry-run` для всех команд управления пакетами
@@ -201,6 +199,9 @@ class ScriptsCommandProvider implements CommandProvider
 1. Полноценная работа с `extra` из консоли
 1. Работа с репозиториями
 1. Оффлайн-режим
+
+## Выводы
+{:.section.section-white}
 
 ## Выводы
 
