@@ -32,7 +32,7 @@ style: |
 - {:.next}Проблемы
 - {:.next}Решения
 - {:.next}Composer 2.0
-- {:.next}Вывод
+- {:.next}Выводы
 
 ## Введение в Composer
 {:.section.section-white}
@@ -48,6 +48,8 @@ style: |
 ## Альтернативы, есть но ...
 
 **Нативность**{:.next}
+
+**Богатый набор фич**{:.next}
 
 **Качество**{:.next}
 
@@ -105,18 +107,18 @@ style: |
 **composer require brainmaestro/composer-git-hooks**
 
 ```json
-  "extra": {      
-      "hooks": {
-          "pre-commit": "your mighty bash one-liner"
-      },     
-  }       
+    "extra": {      
+        "hooks": {
+            "pre-commit": "#my mighty bash one-liner"
+        },     
+    }       
 ```
 
 **cat .git/hooks/pre-commit**
 ```bash
 #!/bin/sh
 
-your mighty bash one-liner
+#my mighty bash one-liner
 ```
 
 ## Проблемы
@@ -124,30 +126,61 @@ your mighty bash one-liner
 
 ## Проблемы
 
-1. Работа с переменными окружение
+1. Раздутый набор скриптов
+1. Редактирование composer.json из консоли (Composer 2.0)
 1. Настройка вывода результатов выполнения команды
-1. Нет возможности запускать фоновые процессы
-1. Нельзя повторно запускать комплексную команду со стадии, когда была ошибка
-1. Оффлайн-режим (Появился в composer 2.0)
-1. Ограничения схемы настроек на изменение самого файла настроек (частично исправлено в Composer 2.0)
+1. Работа с переменными окружения
+1. Фоновые процессы
+1. Повторый запуск команды после последнего успешного шага
+1. Оффлайн-режим (Composer 2.0)
+
+### Без учета откровенных багов
+
+## Проблемы: пример с фоновым процессом
 
 ## Решения
 {:.section.section-white}
 
-## Выводы
+## Раздутый набор скриптов: решение
+{:.fullscreen}
+```php
+use Composer\Plugin\Capability\CommandProvider;
 
-1. Используйте скрипты
-2. Используйте плагины
-3. Используйте приватные репо
+class ScriptsCommandProvider implements CommandProvider
+{
+    /**
+     * {@inheritdoc}
+     */
+    public function getCommands()
+    {
+        $commands = [];
+        /**
+         * fullfill commands
+         */
+
+        return $commands;
+    }
+```
+
+## Редактирование composer.json из консоли: решение
+
+**Своя схема для composer.json**
 
 ## Composer 2.0
 
 1. Плагин `hirak/prestissimo` больше не нужен
 1. `--dry-run` для всех команд управления пакетами
+1. `check-platform-reqs` встроена в `dump-autoload`
 1. Опция `--no-suggest` удалена?!
 1. Полноценная работа с extra из консоли
 1. Работа с репозиториями
 1. Оффлайн-режим
+
+## Выводы
+
+1. Используйте скрипты
+1. Используйте плагины
+1. Форк composer-а? Может быть?!
 
 ## Полезная ссылка
 
