@@ -200,11 +200,10 @@ class ScriptsCommandProvider implements CommandProvider
 ## Решение: вывод результатов выполнения команды (2)
 {:.fullscreen}
 ```php
+
 use Symfony\Component\Console\Command\Command as BaseCommand;
 
-interface MyCommand extends BaseCommand {
-    protected $verbosity;
-
+interface MyCustomVerbosityCommand extends BaseCommand {
     public function run(/** */) {
         // $output->write(/** */);
         $$this->writeWithVerbosity(/** */)
@@ -212,10 +211,6 @@ interface MyCommand extends BaseCommand {
 
     protected function writeWithVerbosity(/** */) {
         $this->getVerbosity($output->getVerbosity())
-    }
-
-    protected function getVerbosity($output) {
-        return $this->verbosity ?? $output->getVerbosity();
     }
 }
 ```
