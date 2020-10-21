@@ -134,6 +134,8 @@ style: |
 #my mighty bash one-liner
 ```
 
+## Система автоматической сборки для PHP
+
 ## Проблемы
 {:.section.section-white}
 
@@ -141,15 +143,15 @@ style: |
 
 1. Раздутый набор скриптов
 1. Редактирование composer.json из консоли (Composer 2.0)
-1. Настройка вывода результатов выполнения команды
-1. Работа с переменными окружения
+1. Вывод результатов выполнения команды
+1. Переменные окружения
 1. Фоновые процессы
 1. Повторый запуск команды после последнего успешного шага
 1. Оффлайн-режим (Composer 2.0)
 
 ### Без учета откровенных багов
 
-## Проблемы: пример с фоновым процессом
+## Проблем: фоновый процесс
 {:.pre-big}
 ```json
 
@@ -158,7 +160,7 @@ style: |
 }
 ```
 
-## Проблемы: пример с фоновым процессом, костыль
+## Костыль: фоновый процесс
 {:.pre-big}
 ```json
 
@@ -170,7 +172,7 @@ style: |
 ## Решения
 {:.section.section-white}
 
-## Раздутый набор скриптов: решение
+## Решение: Раздутый набор скриптов
 ```php
 class ScriptsCommandProvider implements CommandProvider
 {
@@ -183,9 +185,46 @@ class ScriptsCommandProvider implements CommandProvider
 }
 ```
 
-## Редактирование composer.json из консоли: решение
+## Решение: редактирование composer.json из консоли
 
 **Своя схема для composer.json**
+
+## Решение: вывод результатов выполнения команды
+
+**Интеграция с monolog/monolog или аналогами**
+или
+**Замена \Symfony\...\Command**
+```php
+
+use Symfony\Component\Console\Command\Command as BaseCommand;
+
+interface MyCommand extends BaseCommand {
+    protected $verbosity;
+
+    public function run(/** */) {
+        // $output->write(/** */);
+        $$this->writeWithVerbosity(/** */)
+    }
+
+    protected function writeWithVerbosity(/** */) {
+        $this->getVerbosity($output->getVerbosity())
+    }
+
+    protected function getVerbosity($output) {
+        return $this->verbosity ?? $output->getVerbosity();
+    }
+}
+```
+
+## Решение: Переменные окружения
+
+## Решение: фоновый процесс
+
+**hopuh или dosown**
+
+**уход в фоновый процесс на уровне запускаемого скрипта**
+
+**Замена symfony/process на backgroundable/process**
 
 ## Composer 2.0
 {:.section.section-white}
