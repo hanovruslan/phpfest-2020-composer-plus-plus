@@ -192,10 +192,13 @@ class ScriptsCommandProvider implements CommandProvider
 ## Решение: вывод результатов выполнения команды
 
 **Интеграция с monolog/monolog или аналогами**
-или
-**Замена \Symfony\...\Command**
-```php
 
+или
+
+**Замена \Symfony\...\Command**
+
+## Решение: вывод результатов выполнения команды (2)
+```php
 use Symfony\Component\Console\Command\Command as BaseCommand;
 
 interface MyCommand extends BaseCommand {
@@ -220,7 +223,7 @@ interface MyCommand extends BaseCommand {
 
 ## Решение: фоновый процесс
 
-**hopuh или dosown**
+**& или hohup или dosown**
 
 **уход в фоновый процесс на уровне запускаемого скрипта**
 
