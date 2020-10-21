@@ -198,6 +198,7 @@ class ScriptsCommandProvider implements CommandProvider
 **Замена \Symfony\...\Command**
 
 ## Решение: вывод результатов выполнения команды (2)
+{:.fullscreen}
 ```php
 use Symfony\Component\Console\Command\Command as BaseCommand;
 
