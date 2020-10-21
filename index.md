@@ -101,7 +101,10 @@ style: |
 * brainmaestro/composer-git-hooks
 * mouf/nodejs-installer
 * neronmoon/scriptsdev
-* symfony/flex
+* symfony/flex*
+
+### Использую, за исключением
+### * - Не использую, но по субъективным причинам
 
 ## Экзотические плагины
 
