@@ -10,7 +10,7 @@ style: |
     figure.short { width: 480px !important; }
     .text-center { text-align: center !important; }
     img.center { margin: auto !important; }
-    section.section-white {background-color: #fff !important;}
+    section.section-white { background-color: #fff !important; }
 ---
 # ![](pictures/phpfest.jpg){:.logo}
 
@@ -19,11 +19,11 @@ style: |
 
 ## План
 
-**Что будет в докладе**{:.slide.next}
+**Что будет в докладе**{:.slide-red.next}
 
 **Чего не будет в докладе**{:.slide-red.next}
 
-**План**{:.slide.next}
+**План**{:.slide-red.next}
 
 ## План
 
@@ -37,9 +37,11 @@ style: |
 
 ## Альтернативы
 
-**PHing**{:.slide.next}
-**Makefile**{:.slide.next}
-**Gradle**{:.slide.next}
+**PHing**
+
+**Makefile**
+
+**Gradle**
 
 ## Альтернативы, есть но ...
 
