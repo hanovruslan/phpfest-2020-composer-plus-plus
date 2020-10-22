@@ -85,7 +85,7 @@ style: |
 * {:.next}Окружение запуска команд
 * {:.next}Плагины
 
-## Схема работы
+## Схема работы без плагинов
 
 ![](pictures/schema/composer.png){:.images-wide}
 
