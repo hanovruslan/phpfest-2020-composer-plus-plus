@@ -206,8 +206,6 @@ class ScriptsCommandProvider implements CommandProvider
 {:.fullscreen}
 ```php
 
-use Symfony\Component\Console\Command\Command as BaseCommand;
-
 class CustomVerbosityCommand extends BaseCommand {
     public function run(/** */) {
         // $output->write(/** */);
