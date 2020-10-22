@@ -39,7 +39,7 @@ style: |
 
 ## Альтернативы
 
-**PHing**{:.next}
+**Phing**{:.next}
 
 **Makefile**{:.next}
 
@@ -89,7 +89,7 @@ style: |
 
 ![](pictures/schema/composer.png){:.images-wide}
 
-## Плагины
+## Плагин
 
 **Пакет типа `composer-plugin`**
 
@@ -125,7 +125,7 @@ style: |
 
 ### Изучал сам, но предпочел не использовать
 
-## Примеры использование плагинов
+## Примеры использования плагинов
 
 **composer require brainmaestro/composer-git-hooks**
 
@@ -151,12 +151,12 @@ style: |
 ## Проблемы
 
 1. Раздутый набор скриптов
-1. Редактирование composer.json из консоли (Composer 2.0)
 1. Вывод результатов выполнения команды
 1. Переменные окружения
 1. Фоновые процессы
-1. Повторый запуск команды после последнего успешного шага
+1. Редактирование всех настроек из консоли (Composer 2.0, больше, но не всех)
 1. Оффлайн-режим (Composer 2.0)
+1. Повторный запуск команды после последнего успешного шага
 
 ### Без учета откровенных багов
 
@@ -194,10 +194,6 @@ class ScriptsCommandProvider implements CommandProvider
 }
 ```
 
-## Редактирование composer.json из консоли : решение
-
-**Своя схема для composer.json**
-
 ## Вывод результатов выполнения команды : решение
 
 **Интеграция с monolog/monolog или аналогами**
@@ -212,19 +208,24 @@ class ScriptsCommandProvider implements CommandProvider
 
 use Symfony\Component\Console\Command\Command as BaseCommand;
 
-class MyCustomVerbosityCommand extends BaseCommand {
+class CustomVerbosityCommand extends BaseCommand {
     public function run(/** */) {
         // $output->write(/** */);
-        $this->writeWithVerbosity(/** */)
+        $this->writeWithVerbosity(/** */);
     }
 
     protected function writeWithVerbosity(/** */) {
-        $this->getVerbosity($output->getVerbosity())
+        $customVerbosity = $this->getVerbosity($defaultVerbosity);
+        $output->write(
+            $message,
+            $newline,
+            $customVerbosity
+        );
     }
 }
 ```
 
-## Переменные окружения : Решение
+## Переменные окружения : решение
 
 **Плагин на событие `init`**
 
@@ -238,9 +239,13 @@ class MyCustomVerbosityCommand extends BaseCommand {
 
 **уход в фоновый процесс на уровне запускаемого скрипта**
 
-**Замена symfony/process на noname/process**
+**Замена symfony/process на noname/background-process**
 
-## Повторый запуск команды после последнего успешного шага : решение
+## Редактирование composer.json из консоли : решение
+
+**Своя схема для composer.json**
+
+## Повторный запуск команды после последнего успешного шага : решение
 
 **Не знаю (**
 
