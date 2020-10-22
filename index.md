@@ -148,7 +148,7 @@ my-mighty-one-liner.sh
 
 ## Проблемы
 
-1. раздутый набор скриптов
+1. много скриптов
 1. вывод результатов выполнения команды
 1. переменные окружения
 1. фоновые процессы
@@ -158,7 +158,7 @@ my-mighty-one-liner.sh
 
 ### * - только секция extra
 
-## Проблема: фоновый процесс : пример
+## Фоновый процесс, пример
 {:.pre-big}
 ```json
 
@@ -167,7 +167,7 @@ my-mighty-one-liner.sh
 }
 ```
 
-## Проблема: фоновый процесс : костыль
+## Фоновый процесс, костыль
 {:.pre-big}
 ```json
 
@@ -179,7 +179,7 @@ my-mighty-one-liner.sh
 ## Решения
 {:.section.section-white}
 
-## Раздутый набор скриптов : решение
+## Много скриптов, решение
 ```php
 class ScriptsCommandProvider implements CommandProvider
 {
@@ -192,7 +192,7 @@ class ScriptsCommandProvider implements CommandProvider
 }
 ```
 
-## Вывод результатов выполнения команды : решение
+## Вывод результатов выполнения команды, решение
 
 **Интеграция с monolog/monolog или аналогами**
 
@@ -200,7 +200,7 @@ class ScriptsCommandProvider implements CommandProvider
 
 **Пропатчить компонент symfony/console**
 
-## Вывод результатов выполнения команды (2) : решение
+## Вывод результатов выполнения команды, решение (2)
 {:.fullscreen}
 ```php
 
@@ -221,7 +221,7 @@ class CustomVerbosityCommand extends BaseCommand {
 }
 ```
 
-## Переменные окружения : решение
+## Переменные окружения, решение
 
 **`init` событие**
 
@@ -229,7 +229,7 @@ class CustomVerbosityCommand extends BaseCommand {
 
 **`getenv` и `putenv`**
 
-## Фоновый процесс : решение
+## Фоновый процесс, решение
 
 **& или hohup или dosown**
 
@@ -237,11 +237,11 @@ class CustomVerbosityCommand extends BaseCommand {
 
 **замена symfony/process на noname/background-process**
 
-## Редактирование composer.json из консоли : решение
+## Редактирование composer.json из консоли, решение
 
 **своя схема для composer.json**
 
-## Повторный запуск команды после последнего успешного шага : решение
+## Повторный запуск команды после последнего успешного шага, решение
 
 **решения не знаю (**{:.red}
 
