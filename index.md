@@ -130,7 +130,7 @@ style: |
 ```json
 "extra": {
     "hooks": {
-        "pre-commit": "#my mighty bash one-liner"
+        "pre-commit": "my-mighty-one-liner.sh"
     }
 }
 ```
@@ -140,7 +140,7 @@ style: |
 ```bash
 #!/bin/sh
 
-#my mighty bash one-liner
+my-mighty-one-liner.sh
 ```
 
 ## Проблемы
@@ -150,7 +150,7 @@ style: |
 
 1. раздутый набор скриптов
 1. вывод результатов выполнения команды
-1. реременные окружения
+1. переменные окружения
 1. фоновые процессы
 1. редактирование всех настроек из консоли (Composer 2.0*)
 1. оффлайн-режим (Composer 2.0)
