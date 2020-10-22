@@ -225,11 +225,11 @@ class CustomVerbosityCommand extends BaseCommand {
 
 ## Переменные окружения : решение
 
-**Плагин на событие `init`**
+**`init` Событие**
 
-**использование `extra` для реестра переменных**
+**`extra` для реестра переменных**
 
-**Работа с `getenv` и `putenv`**
+**`getenv` и `putenv`**
 
 ## Фоновый процесс : решение
 
@@ -254,13 +254,13 @@ class CustomVerbosityCommand extends BaseCommand {
 
 ## Composer 2.0
 
-1. Плагин `hirak/prestissimo` больше не нужен
+1. `hirak/prestissimo` больше не нужен
 1. `--dry-run` для всех команд управления пакетами
-1. `check-platform-reqs` встроена в `dump-autoload`
-1. Опция `--no-suggest` удалена?!
-1. Полноценная работа с `extra` из консоли
-1. Работа с репозиториями
-1. Оффлайн-режим
+1. `dump-autoload` -> `check-platform-reqs`
+1. `--no-suggest` удалили?!
+1. `extra` полностью из консоли
+1. работа с репозиториями
+1. оффлайн-режим
 
 ## Выводы
 {:.section.section-white}
