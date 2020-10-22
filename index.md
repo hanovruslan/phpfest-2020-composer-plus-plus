@@ -209,10 +209,10 @@ class ScriptsCommandProvider implements CommandProvider
 class CustomVerbosityCommand extends BaseCommand {
     public function run(/** */) {
         // $output->write(/** */);
-        $this->writeWithVerbosity(/** */);
+        $this->writeWithCustomVerbosity(/** */);
     }
 
-    protected function writeWithVerbosity(/** */) {
+  protected function writeWithCustomVerbosity(/** */) {
         $customVerbosity = $this->getVerbosity($defaultVerbosity);
         $output->write(
             $message,
@@ -245,7 +245,7 @@ class CustomVerbosityCommand extends BaseCommand {
 
 ## Повторный запуск команды после последнего успешного шага : решение
 
-**Не знаю (**
+**Не знаю (**{:.red}
 
 **Но знаю где подсмотреть (Gradle)**
 
@@ -290,7 +290,7 @@ class CustomVerbosityCommand extends BaseCommand {
 <!-- left -->
 - {:.telegram}hanovruslan
 - {:.mail}hanov.ruslan@gmail.com
-- {:.github}hanovruslan41
+- {:.github}hanovruslan
 
 <!-- right -->
 
