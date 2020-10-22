@@ -112,7 +112,7 @@ style: |
 * neronmoon/scriptsdev
 * symfony/flex*
 
-### Использую, за исключением *
+### использую за исключением *
 
 ## Экзотические плагины
 
@@ -121,7 +121,7 @@ style: |
 * slince/composer-registry-manager
 * Composer Patches
 
-### Изучал сам, но предпочел не использовать
+### изучал, но предпочел не использовать
 
 ## Примеры использования плагинов
 
@@ -223,7 +223,7 @@ class CustomVerbosityCommand extends BaseCommand {
 
 ## Переменные окружения : решение
 
-**`init` Событие**
+**`init` событие**
 
 **`extra` для реестра переменных**
 
@@ -239,7 +239,7 @@ class CustomVerbosityCommand extends BaseCommand {
 
 ## Редактирование composer.json из консоли : решение
 
-**Своя схема для composer.json**
+**своя схема для composer.json**
 
 ## Повторный запуск команды после последнего успешного шага : решение
 
